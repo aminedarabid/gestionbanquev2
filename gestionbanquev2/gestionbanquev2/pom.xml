@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>fr.Aminecorp</groupId>
+  <artifactId>gestionbanquev2</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+
+  <name>gestionbanquev2</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.0.5</version>
+    </dependency>
+  </dependencies>
+
+  <modules>
+    <module>gestionbanquev2-domaine</module>
+    <module>gestionbanquev2-service</module>
+    <module>gestionbanquev2-dao</module>
+    <module>gestionbanquev2-presentation</module>
+  </modules>
+
+   <dependencyManagement>
+        <dependencies>
+            <!-- ===== Modules ===== -->
+            <dependency>
+                <groupId>fr.Aminecorp.domaine</groupId>
+                <artifactId>gestionbanquev2-domaine</artifactId>
+            </dependency>
+
+            <dependency>
+                <groupId>fr.Aminecorp.service</groupId>
+                <artifactId>gestionbanquev2-service</artifactId>
+            </dependency>
+
+            <dependency>
+                <groupId>fr.Aminecorp.DAO</groupId>
+                <artifactId>gestionbanquev2-dao</artifactId>
+            </dependency>
+
+            <dependency>
+                <groupId>fr.Aminecorp.presentation</groupId>
+                <artifactId>gestionbanquev2-presentation</artifactId>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
